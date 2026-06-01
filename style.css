@@ -3,7 +3,21 @@
     --card-bg: #ffffff;
     --primary-color: #4a90e2;
     --text-color: #333;
+    --sub-text: #666;
     --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --ball-placeholder: #ddd;
+    --ball-placeholder-text: #999;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --primary-color: #64b5f6;
+    --text-color: #f0f0f0;
+    --sub-text: #aaa;
+    --shadow: 0 10px 30px rgba(0,0,0,0.5);
+    --ball-placeholder: #444;
+    --ball-placeholder-text: #777;
 }
 
 body {
@@ -16,9 +30,11 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
+    position: relative;
     background: var(--card-bg);
     padding: 3rem;
     border-radius: 24px;
@@ -26,6 +42,33 @@ body {
     text-align: center;
     max-width: 500px;
     width: 90%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-btn {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+}
+
+#theme-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 header h1 {
@@ -35,7 +78,7 @@ header h1 {
 }
 
 header p {
-    color: #666;
+    color: var(--sub-text);
     margin-top: 0.5rem;
 }
 
@@ -62,8 +105,8 @@ header p {
 }
 
 .ball.placeholder {
-    background-color: #ddd;
-    color: #999;
+    background-color: var(--ball-placeholder);
+    color: var(--ball-placeholder-text);
     box-shadow: none;
 }
 
