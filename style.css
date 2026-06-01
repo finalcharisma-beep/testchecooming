@@ -1,1 +1,104 @@
-/* Add styles here */
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --primary-color: #4a90e2;
+    --text-color: #333;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+header p {
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.lotto-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ball.placeholder {
+    background-color: #ddd;
+    color: #999;
+    box-shadow: none;
+}
+
+/* Lotto Ball Colors */
+.ball-1 { background-color: #fbc400; } /* 1-10 */
+.ball-11 { background-color: #69c8f2; } /* 11-20 */
+.ball-21 { background-color: #ff7272; } /* 21-30 */
+.ball-31 { background-color: #aaa; }    /* 31-40 */
+.ball-41 { background-color: #b0d840; } /* 41-45 */
+
+.generate-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+    background-color: #357abd;
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #999;
+}

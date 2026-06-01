@@ -1,14 +1,36 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Lotto Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello2');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div class="container">
+        <header>
+            <h1>Lotto Number Generator</h1>
+            <p>오늘의 행운을 확인해보세요</p>
+        </header>
+        
+        <main>
+            <div id="lotto-display" class="lotto-numbers">
+                <div class="ball placeholder">?</div>
+                <div class="ball placeholder">?</div>
+                <div class="ball placeholder">?</div>
+                <div class="ball placeholder">?</div>
+                <div class="ball placeholder">?</div>
+                <div class="ball placeholder">?</div>
+            </div>
+            
+            <button id="generate-btn" class="generate-btn">번호 생성하기</button>
+        </main>
+        
+        <footer>
+            <p>© 2026 Luck Generator</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
